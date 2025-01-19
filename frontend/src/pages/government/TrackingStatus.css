@@ -1,0 +1,82 @@
+/* Container for the whole page */
+.tracking-status-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* Container for the tracking steps */
+  .tracking-steps-container {
+    margin-top: 20px;
+  }
+  
+  .tracking-steps {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .tracking-step {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .step-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-right: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .step-text {
+    flex-grow: 1;
+  }
+  
+  /* Completed steps */
+  .completed-step .step-circle {
+    background-color: #4CAF50;
+  }
+  
+  .completed-step .step-text {
+    color: #4CAF50;
+  }
+  
+  /* Upcoming steps */
+  .upcoming-step .step-circle {
+    background-color: #ddd;
+  }
+  
+  .upcoming-step .step-text {
+    color: #999;
+  }
+  
+  /* Active (current) step */
+  .upcoming-step .step-circle {
+    background-color: #ff9800;
+  }
+  
+  .upcoming-step .step-text {
+    font-weight: bold;
+  }
+  
