@@ -40,7 +40,7 @@ const SubsidyStatus = () => {
   useEffect(() => {
     const fetchStatus = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/subsidy/track/${applicationNumber}`);
+        const response = await axios.get(`https://subsidy-portal.onrender.com/subsidy/track/${applicationNumber}`);
         setStatusDetails(response.data);
       } catch (err) {
         console.error('Error fetching subsidy status:', err);
@@ -62,7 +62,7 @@ const SubsidyStatus = () => {
       setIsUpdating(true);
       try {
         const updatedStatus = { status: "User got subsidy and verified successfully" };
-        await axios.put(`http://localhost:5000/subsidy/update/${applicationNumber}`, updatedStatus);
+        await axios.put(`https://subsidy-portal.onrender.com/subsidy/update/${applicationNumber}`, updatedStatus);
 
         setStatusDetails((prevStatus) => ({
           ...prevStatus,

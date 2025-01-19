@@ -101,7 +101,7 @@ const SubsidyForm = () => {
   }
 
     try {
-      const response = await axios.post('http://localhost:5000/subsidy', {
+      const response = await axios.post('https://subsidy-portal.onrender.com/subsidy', {
         username,
         type,
         ...formData,

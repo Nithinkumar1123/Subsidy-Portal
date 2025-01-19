@@ -14,7 +14,7 @@ const RequestDetail = () => {
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/subsidy/requests/${id}`);
+        const response = await axios.get(`https://subsidy-portal.onrender.com/subsidy/requests/${id}`);
         setRequestDetails(response.data);
       } catch (err) {
         console.error('Error fetching request details:', err);
@@ -28,7 +28,7 @@ const RequestDetail = () => {
   const handleAccept = async () => {
     try {
       const updatedRequest = { status: "Subsidy is approved and go to next step on bank" };
-      const response = await axios.put(`http://localhost:5000/subsidy/requests/${id}`, updatedRequest);
+      const response = await axios.put(`https://subsidy-portal.onrender.com/subsidy/requests/${id}`, updatedRequest);
       setRequestDetails(response.data);
       navigate('/government'); // Navigate to the GovernmentPage after success
     } catch (err) {
@@ -41,7 +41,7 @@ const RequestDetail = () => {
   const handleReject = async () => {
     try {
       const updatedRequest = { status: "Subsidy is rejected try next time" };
-      const response = await axios.put(`http://localhost:5000/subsidy/requests/${id}`, updatedRequest);
+      const response = await axios.put(`https://subsidy-portal.onrender.com/subsidy/requests/${id}`, updatedRequest);
       setRequestDetails(response.data);
       navigate('/government'); // Navigate to the GovernmentPage after success
     } catch (err) {

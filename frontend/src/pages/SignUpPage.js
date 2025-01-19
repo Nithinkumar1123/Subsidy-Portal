@@ -27,7 +27,7 @@ const SignUpPage = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/login/signup", {
+      const response = await axios.post("https://subsidy-portal.onrender.com/login/signup", {
         username,
         password,
         role: "user", // Default role is 'user'

@@ -20,7 +20,7 @@ const TrackSubsidy = () => {
   useEffect(() => {
     const fetchSubsidies = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/subsidy/user/${username}`);
+        const response = await axios.get(`https://subsidy-portal.onrender.com/subsidy/user/${username}`);
         setSubsidies(response.data);
       } catch (err) {
         console.error('Error fetching subsidies:', err);

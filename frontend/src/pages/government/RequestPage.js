@@ -16,7 +16,7 @@ const RequestPage = () => {
   useEffect(() => {
     const fetchRequests = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/subsidy/requests');
+        const response = await axios.get('https://subsidy-portal.onrender.com/subsidy/requests');
         
         // Filter requests with status "In the process"
         const filteredRequests = response.data.filter(

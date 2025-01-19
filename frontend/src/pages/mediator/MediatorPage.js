@@ -12,7 +12,7 @@ const MediatorPage = () => {
   useEffect(() => {
     const fetchApprovedSubsidies = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/subsidy/approved-subsidies');
+        const response = await axios.get('https://subsidy-portal.onrender.com/subsidy/approved-subsidies');
         setSubsidies(response.data);
       } catch (err) {
         console.error('Error fetching approved subsidies:', err);
@@ -25,7 +25,7 @@ const MediatorPage = () => {
   const handleApprove = async (id) => {
     try {
       const updatedStatus = { status: "The subsidy reached the user" };
-      await axios.put(`http://localhost:5000/subsidy/requests/${id}`, updatedStatus);
+      await axios.put(`https://subsidy-portal.onrender.com/subsidy/requests/${id}`, updatedStatus);
       setSubsidies(subsidies.filter((subsidy) => subsidy._id !== id)); // Remove the approved subsidy from the list
     } catch (err) {
       console.error('Error updating subsidy status:', err);
