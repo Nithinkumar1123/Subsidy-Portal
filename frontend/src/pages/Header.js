@@ -18,7 +18,7 @@ function Header() {
           {/* Navbar Brand */}
           <Link className="navbar-brand d-flex align-items-center" to="/">
             <img
-              src="/images/emblem.jpg"
+              src="/Images/emblem.jpg"
               alt="Emblem"
               style={{ width: "35px", height: "35px", marginRight: "10px" }}
             />
